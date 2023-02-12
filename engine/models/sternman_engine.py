@@ -1,0 +1,13 @@
+from engine.engine_base import Engine
+from datetime import datetime
+
+
+class SternmanEngine(Engine):
+    def __init__(self, warning_light_on: bool):
+        self.warning_light_on = warning_light_on
+
+    def needs_service(self):
+        if self.warning_light_on:
+            return True
+        else:
+            return False
